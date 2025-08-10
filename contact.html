@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <title>contact!</title>
+</head>
+
+<body class="h-14 font-sans bckgrnd mx-4">
+  <!-- Header -->
+  <header class="text-center pt-12 pb-3 mx-10 text">
+    <h1 class="text-5xl my-5 font-bold">Contact Me !</h1>
+  </header>
+</body>
+
+<div class="bckgrnd dark:bg-gray-900">
+  <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+      <form action="#" class="space-y-8">
+        <div>
+            <label for="email" class="block mb-2 text-sm font-bold text-gray-900 dark:text-gray-300">Your email</label>
+            <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@email.com" required>
+        </div>
+        <div>
+            <label for="subject" class="block mb-2 text-sm font-bold text-gray-900 dark:text-gray-300">Subject</label>
+            <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="How may I help you?" required>
+        </div>
+        <div class="sm:col-span-2">
+            <label for="message" class="block mb-2 text-sm font-bold text-gray-900 dark:text-gray-300">Your message</label>
+            <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a message..."></textarea>
+        </div>
+        <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 hover:font-bold focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
+      </form>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <title>Photography Portfolio</title>
+  <style>
+      .bckgrnd {
+          background: linear-gradient(90deg, rgba(76,92,0,1) 50%, rgba(76,92,0,1) 50%);
+      }
+  </style>
+</head>
+
+<body class="font-sans text-white mx-4 bckgrnd">
+    <!-- Header -->
+    <header class="text-center pt-12 pb-6">
+      <h1 class="text-5xl font-bold text-amber-400">Photography Portfolio</h1>
+    </header>
+
+    <!-- Slideshow Container -->
+    <section class="max-w-4xl mx-auto relative">
+        <div class="relative w-full overflow-hidden rounded-lg shadow-lg">
+            <div class="slides flex transition-transform duration-700 ease-in-out">
+                <img src="https://via.placeholder.com/800x500" alt="Photo 1" class="w-full hidden">
+                <img src="https://via.placeholder.com/800x500" alt="Photo 2" class="w-full hidden">
+                <img src="https://via.placeholder.com/800x500" alt="Photo 3" class="w-full hidden">
+            </div>
+            
+            <!-- Navigation Buttons -->
+            <button onclick="changeSlide(-1)" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700/50 hover:bg-gray-800 text-white px-4 py-2 rounded-full">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+            <button onclick="changeSlide(1)" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700/50 hover:bg-gray-800 text-white px-4 py-2 rounded-full">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+        </div>
+
+        <!-- Social Media Share Button -->
+        <div class="text-center mt-6">
+            <button class="bg-neutral-500 px-6 py-2 rounded text-white hover:bg-">
+                <ion-icon name="share-social-outline"></ion-icon> Share Portfolio
+            </button>
+        </div>
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slides img');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('hidden', i !== index);
+            });
+        }
+        
+        function changeSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
